@@ -9,15 +9,53 @@ body{
 }
 
 .landing{
-    height: 60vh;
+    height: 65vh;
     background-color: #5a5353;
 }
 
 .welcome {
-    background-color: #EFE6E6;
-    height: 32vh;
+    background-color: #d3bfbf;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+    overflow-y: hidden;
+}
+.welcomeSubLeft{
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: -125px;
+    margin-left: -20px;
+    width: 25%;
 }
 
+.welcome .welcomeLeft {
+    width: 40%;;
+    padding-top: 100px;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+.welcome .welcomeRight {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+    margin-right: -10px;
+    padding-top: 50px;
+}
+
+.welcome h2 {
+    font-size: 45px;
+    font-weight: bold;
+}
+.welcome h3 {
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 22px;
+}
+.welcome p {
+    padding-top: 22px;
+    font-size: 20px;
+}
 /* !!! NAVBAR !!!*/
 nav {
     height: 8vh;
@@ -73,6 +111,13 @@ nav {
     transition: 0.3s ease-in;
 }
 
+@media screen and (min-width: 2400px) {
+        /* 1440p monitors only */
+    #top-left {
+        width: 40%;
+    }
+}
+
 @media screen and (max-width: 1324px) {
     .nav-links{
         width: 60%;
@@ -80,6 +125,15 @@ nav {
     #top-right {
         width: 45%;
         margin-right: -25%;
+    }
+    .welcomeSubLeft {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    #betweenMobile{
+        display: none;
     }
 }
 
@@ -91,9 +145,25 @@ nav {
     #top-right {
         display: none;
     }
+    #between {
+        display: none;
+    }
 
+    #betweenMobile {
+        position: absolute;
+        left: 0;
+        margin-left: -2%;
+        top: 55vh;
+        stroke-dasharray: 195;
+        stroke-dashoffset: 195;
+        animation: line-anim 2s ease forwards 3.4s;
+    }
     .landing{
-        min-height: 250px; 
+        height: 52vh;
+    }
+
+    .welcome {
+        
     }
 /* !!! NAVBAR !!!*/
     .hamburger{
@@ -111,7 +181,7 @@ nav {
         right: 5%;
         top: 50%;
         transform: translate(-5%, -50%);
-        z-index: 2;
+        z-index: 3;
     }
 
     .nav-links {
@@ -124,11 +194,13 @@ nav {
         clip-path: circle(100px at 90% -10%);
         -webkit-clip-path: circle(100px at 100% -20%);
         transition: all 1s ease-out;
+        z-index: 2;
     }
     .nav-links.open{
         clip-path: circle(800px at 65% -10%);
         -webkit-clip-path: circle(800px at 65% -10%);
         pointer-events: all;
+        z-index: 2;
     }
     .landing{
         flex-direction: column;
@@ -180,6 +252,15 @@ nav {
     animation: line-anim 2s ease forwards 3.4s;
 }
 
+#between {
+    position: absolute;
+    left: 0;
+    bottom: 22vh;
+    stroke-dasharray: 195;
+    stroke-dashoffset: 195;
+    animation: line-anim 2s ease forwards 3.4s;
+}
+
 /* Meet Charlie May */
 #meetCharlieMay {
     position: absolute;
@@ -187,6 +268,80 @@ nav {
     top: 34vh;
     font-size: 1.2em;
     animation: fill-anim 0.5s ease forwards 3s;
+}
+
+/* LOGO */
+
+#anim1_1 {
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: line-anim 2s ease forwards 3s;
+}
+
+#anim1_2 {
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: line-anim 1s ease forwards 3.25s;
+}
+
+#anim2_1{
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: line-anim 1s ease forwards 3.5s;
+}
+
+#anim2_2{
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: line-anim 1s ease forwards 3.75s;
+}
+
+#anim2_3{
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: line-anim 1s ease forwards 4s;
+}
+
+#anim3_1{
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: line-anim 1s ease forwards 4s;
+}
+
+#anim3_2{
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: line-anim 1s ease forwards 4.25s;
+}
+
+#anim4_1{
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: line-anim 1s ease forwards 4.25s;
+}
+
+#anim4_2{
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: line-anim 1s ease forwards 4.5s;
+}
+
+#anim5 {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: line-anim 1s ease forwards 4.75s;
+}
+
+#anim6 {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: line-anim 1s ease forwards 5s;
+}
+
+#Ellipse_33, #Ellipse_34 {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: line-anim 1s ease forwards 4s;
 }
 
 /* Meet */
